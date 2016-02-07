@@ -20,11 +20,14 @@ This builds all implementations for a bunch of different ATmega MCUs.
 
   * `test-c-custom`
 
-    Custom C code with inline asm.
+    Custom C code with inline asm. No `++` operators, everything
+    operation needs to be done with function calls like
+    `incr_uint24(&foo)`.
 
   * `test-c-gcc47`
 
-	Use the `__uint24` which GCC 4.7 introduced on AVR
+	Use the `__uint24` which GCC 4.7 introduced on AVR. This allows
+    using the normal C `++foo;` operator.
 
   * `test-cxx-chararray`
 
