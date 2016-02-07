@@ -9,4 +9,6 @@ void test(void)
   asm volatile ("nop\n");
   incr_c_gcc_uint24_t(&table[13]);
   asm volatile ("nop\n");
+  ++table[13];
+  asm volatile ("nop\n");
 }
